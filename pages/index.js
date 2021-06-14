@@ -1,5 +1,5 @@
-import Head from "next/head";
+import LoginButton from "../components/atoms/LoginButton";
 
 export default function Home() {
-  return <div>this is home</div>;
+  return <LoginButton></LoginButton>;
 }
