@@ -20,7 +20,20 @@ export default function LoginButton() {
   };
 
   const handleLogin = () => {
-      axios.get(API + `/users`)
+    if (username === "" || password === "") {
+      alert("Username / Email & Password tidak boleh kosong");
+    } else {
+      axios
+        .get(API + `/users?username=${username}&password=${password}`)
+        .then((res) => {
+          // console.log(res.data);
+          localStorage.setItem()
+          handleClose();
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    }
   };
 
   return (
@@ -102,7 +115,7 @@ export default function LoginButton() {
           </a>
         </Modal.Body>
         <Modal.Footer>
-          <Button onClick={handleClose} style={{ paddingInline: "25px" }}>
+          <Button onClick={handleLogin} style={{ paddingInline: "25px" }}>
             Login
           </Button>
         </Modal.Footer>
