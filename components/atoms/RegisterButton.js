@@ -12,7 +12,9 @@ export default function RegisterButton() {
 
   return (
     <>
-      <Button onClick={handleShow}>Register</Button>
+      <Button onClick={handleShow} id="login-regis-btn">
+        Register
+      </Button>
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header>

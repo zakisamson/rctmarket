@@ -24,10 +24,13 @@ export default function LoginButton() {
       alert("Username / Email & Password tidak boleh kosong");
     } else {
       axios
-        .get(API + `/users?username=${username}&password=${password}`)
+        .get(
+          API +
+            `/users?username=${username}|email=${username}&password=${password}`
+        )
         .then((res) => {
-          // console.log(res.data);
-          localStorage.setItem()
+          console.log(res.data);
+          localStorage.setItem("userdata", JSON.stringify(res.data));
           handleClose();
         })
         .catch((error) => {
@@ -38,20 +41,12 @@ export default function LoginButton() {
 
   return (
     <>
-      <Button
-        onClick={handleShow}
-        style={{
-          backgroundColor: "transparent",
-          color: "blue",
-          borderRadius: "10px",
-          margin: "5px",
-        }}
-      >
+      <Button onClick={handleShow} id="login-regis-btn">
         Login
       </Button>
 
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header>
+      <Modal show={show} onHide={handleClose} id="modal">
+        <Modal.Header style={{ backgroundColor: "#008c8c", color: "#ffd651" }}>
           <Modal.Title>Login</Modal.Title>
         </Modal.Header>
         <Modal.Body>
@@ -111,11 +106,11 @@ export default function LoginButton() {
               alignItems: "center",
             }}
           >
-            Lupa Password
+            Forgot Password
           </a>
         </Modal.Body>
-        <Modal.Footer>
-          <Button onClick={handleLogin} style={{ paddingInline: "25px" }}>
+        <Modal.Footer style={{ backgroundColor: "#008c8c", color: "#ffd651" }}>
+          <Button onClick={handleLogin} id="login-regis-btn">
             Login
           </Button>
         </Modal.Footer>

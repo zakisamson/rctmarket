@@ -19,3 +19,68 @@ a {
   --primary: #008c8c;
   --secondary: #ffd651;
 }
+
+/*========= ATOMS DESIGN =========*/
+
+#login-regis-btn {
+  width: 100px;
+  background-color: transparent;
+  border: 1px solid var(--secondary);
+  color: var(--secondary);
+  font-weight: 500;
+  border-radius: 10px;
+  margin-inline: 10px;
+}
+
+#login-regis-btn:hover {
+  background-color: var(--secondary);
+  color: var(--primary);
+}
+
+#modal {
+  border: none;
+}
+
+#detail-btn {
+  background-color: transparent;
+  border: 1px solid var(--secondary);
+  color: var(--secondary);
+  font-weight: 500;
+  border-radius: 10px;
+}
+
+#detail-btn:hover {
+  background-color: var(--secondary);
+  color: var(--primary);
+}
+
+/*========= MOLECULE DESIGN =========*/
+#card-cmp {
+  background: rgb(188, 255, 255);
+  background: linear-gradient(
+    186deg,
+    rgba(188, 255, 255, 1) 10%,
+    rgba(0, 140, 140, 1) 100%
+  );
+  margin-block: 10px;
+}
+
+#card-cmp:hover {
+  cursor: pointer;
+}
+
+/*========= ORGANISM DESIGN =========*/
+
+#navbar-bg {
+  background-color: var(--primary);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+#nav-btn {
+  color: var(--secondary);
+  padding-inline: 15px;
+  font-weight: 500;
+}

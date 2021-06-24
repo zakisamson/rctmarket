@@ -1,10 +1,12 @@
 import { Button } from "react-bootstrap";
-import { FaAngleRight } from "react-icons/fa";
+import { BiChevronsRight } from "react-icons/bi";
 
-export default function DetailButton({...buttonProps}) {
+export default function DetailButton({ ...buttonProps }) {
   return (
-    <Button>
-      Detail <FaAngleRight />
+    <Button id="detail-btn">
+      <p style={{ margin: "0" }}>
+        Detail <BiChevronsRight size="16px" />
+      </p>
     </Button>
   );
 }
