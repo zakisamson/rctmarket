@@ -3,11 +3,21 @@ import DetailButton from "../atoms/DetailButton";
 
 export default function CardComponent({ source, category, name, price }) {
   return (
-    <Card style={{ width: "295px", border: "none" }} id="card-cmp">
+    <Card
+      style={{
+        minWidth: "295px",
+        border: "0.5px solid #008c8c",
+        marginInline: "15px",
+      }}
+      id="card-cmp"
+    >
       <Card.Img
         variant="top"
         src={source}
-        style={{ width: "295px", height: "220px" }}
+        style={{
+          width: "293px",
+          height: "293px",
+        }}
       />
       <Card.Body
         style={{
@@ -17,21 +27,32 @@ export default function CardComponent({ source, category, name, price }) {
           color: "#ffd651",
         }}
       >
+        <div style={{ flex: "0.6" }}>
+          <Card.Text
+            style={{
+              marginBottom: "0px",
+              fontSize: "13px",
+              letterSpacing: "1px",
+            }}
+          >
+            {category}
+          </Card.Text>
+          <Card.Text
+            style={{
+              fontWeight: "700",
+              fontSize: "25px",
+              marginBlock: "3px",
+              minHeight: "111px",
+            }}
+          >
+            {name}
+          </Card.Text>
+        </div>
         <Card.Text
-          style={{
-            marginBottom: "0px",
-            fontSize: "13px",
-            letterSpacing: "1px",
-          }}
+          style={{ fontWeight: "600", overflowX: "auto", flex: "0.4" }}
         >
-          {category}
+          Rp. {price}
         </Card.Text>
-        <Card.Text
-          style={{ fontWeight: "700", fontSize: "25px", marginBlock: "3px" }}
-        >
-          {name}
-        </Card.Text>
-        <Card.Text style={{ fontWeight: "600" }}>{price}</Card.Text>
         <DetailButton />
       </Card.Body>
     </Card>

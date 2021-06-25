@@ -1,4 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+import React from "react";
 import axios from "axios";
 import { API } from "../../pages/api/Helper";
 import { useState } from "react";
@@ -12,13 +13,11 @@ export default function RegisterButton() {
 
   return (
     <>
-      <Button onClick={handleShow} id="login-regis-btn">
-        Register
-      </Button>
+      <Button onClick={handleShow} id="login-regis-btn">Register</Button>
 
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header>
-          <Modal.Title>Login</Modal.Title>
+      <Modal show={show} onHide={handleClose} id="modal">
+        <Modal.Header style={{ backgroundColor: "#008c8c", color: "#ffd651" }}>
+          <Modal.Title>Register</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Image
@@ -37,12 +36,25 @@ export default function RegisterButton() {
               style={{ marginBottom: "1.25rem" }}
             >
               <Form.Label style={{ fontWeight: "600", fontSize: "1rem" }}>
-                Email / Username
+                Email
               </Form.Label>
               <Form.Control
                 type="text"
                 placeholder="Enter email"
-                // onChange={handleUsername}
+                style={{ borderRadius: "10px" }}
+              />
+            </Form.Group>
+            <Form.Group
+              className="mb-3"
+              controlId="formBasicUsername"
+              style={{ marginBottom: "1.25rem" }}
+            >
+              <Form.Label style={{ fontWeight: "600", fontSize: "1rem" }}>
+                Username
+              </Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Enter username"
                 style={{ borderRadius: "10px" }}
               />
             </Form.Group>
@@ -62,26 +74,32 @@ export default function RegisterButton() {
               <Form.Control
                 type="password"
                 placeholder="Password"
-                // onChange={handlePassword}
+                style={{ borderRadius: "10px" }}
+              />
+            </Form.Group>
+            <Form.Group
+              className="mb-3"
+              controlId="formBasicConfirmPassword"
+              style={{ marginBottom: "1.25rem" }}
+            >
+              <Form.Label
+                style={{
+                  fontWeight: "600",
+                  fontSize: "1rem",
+                }}
+              >
+                Confirm Password
+              </Form.Label>
+              <Form.Control
+                type="password"
+                placeholder="Re-type password"
                 style={{ borderRadius: "10px" }}
               />
             </Form.Group>
           </Form>
-          <a
-            href="/"
-            style={{
-              textDecoration: "none",
-              fontSize: "14px",
-              justifyContent: "center",
-              flex: "1",
-              alignItems: "center",
-            }}
-          >
-            Lupa Password
-          </a>
         </Modal.Body>
-        <Modal.Footer>
-          <Button style={{ paddingInline: "25px" }}>Login</Button>
+        <Modal.Footer style={{ backgroundColor: "#008c8c", color: "#ffd651" }}>
+          <Button id="login-regis-btn">Register</Button>
         </Modal.Footer>
       </Modal>
     </>

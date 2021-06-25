@@ -20,7 +20,7 @@ class Carousels extends Component {
       .get(API + `/carousel`)
       .then((res) => {
         this.setState({ album: res.data });
-        console.log(this.state.album);
+        // console.log(this.state.album);
       })
       .catch((error) => {
         console.log(error);
