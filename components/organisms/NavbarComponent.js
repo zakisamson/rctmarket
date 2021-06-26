@@ -25,7 +25,7 @@ export default function NavbarComponent() {
           <Nav className="justify-content-end">
             <LoginButton />
             <RegisterButton />
-            <UserButton username="zaki"/>
+            <UserButton />
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -12,8 +12,6 @@ export default function RegisterButton() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [confpassword, setConfpassword] = useState("");
-  const [emailErr, setEmailErr] = useState(false);
-  const [pwdError, setPwdError] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -99,7 +97,6 @@ export default function RegisterButton() {
                 style={{ borderRadius: "10px" }}
                 onChange={(e) => setEmail(e.target.value)}
               />
-              {emailErr && <p>Your email is invalid</p>}
             </Form.Group>
             <Form.Group
               className="mb-3"

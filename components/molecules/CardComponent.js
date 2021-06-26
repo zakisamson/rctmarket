@@ -24,7 +24,7 @@ export default function CardComponent({ source, category, name, price }) {
           display: "flex",
           flexDirection: "column",
           textAlign: "left",
-          color: "#ffd651",
+          color: "#005858",
         }}
       >
         <div style={{ flex: "0.6" }}>

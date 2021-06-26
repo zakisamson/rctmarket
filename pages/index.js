@@ -31,7 +31,12 @@ class Home extends React.Component {
       <Container>
         <CarouselComponent />
         <h4
-          style={{ paddingBlock: "10px", color: "#008c8c", marginTop: "25px" }}
+          style={{
+            paddingBlock: "10px",
+            color: "#005858",
+            marginTop: "25px",
+            fontWeight: "700",
+          }}
         >
           Popular
         </h4>
