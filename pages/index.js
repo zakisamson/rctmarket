@@ -22,7 +22,7 @@ class Home extends React.Component {
   fetchItems = () => {
     axios.get(API + `/products`).then((response) => {
       this.setState({ items: response.data });
-      console.log(this.state.items);
+      // console.log(this.state.items);
     });
   };
 
@@ -42,6 +42,7 @@ class Home extends React.Component {
             {this.state.items.map((value, index) => {
               return (
                 <CardComponent
+                  key={index}
                   source={value.images[0]}
                   category={value.category}
                   name={value.name}

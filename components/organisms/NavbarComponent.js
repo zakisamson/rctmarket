@@ -1,6 +1,7 @@
 import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
 import LoginButton from "../atoms/LoginButton";
 import RegisterButton from "../atoms/RegisterButton";
+import UserButton from "../atoms/UserButton";
 
 export default function NavbarComponent() {
   return (
@@ -24,6 +25,7 @@ export default function NavbarComponent() {
           <Nav className="justify-content-end">
             <LoginButton />
             <RegisterButton />
+            <UserButton username="zaki"/>
           </Nav>
         </Navbar.Collapse>
       </Container>

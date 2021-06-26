@@ -28,6 +28,15 @@
         }
       ],
       "role": "user"
+    },
+    {
+      "username": "zakizaki",
+      "email": "zakisamson@gmail.com",
+      "password": "Zaki98",
+      "role": "user",
+      "cart": [],
+      "phone": "",
+      "id": 3
     }
   ],
   "carousel": [
@@ -56,7 +65,7 @@
       "colour": "LEGEND INK",
       "description": "When it comes to basketball, there is no way around Nike – the brand with the Swoosh belongs to the game like dunks, three-pointers and cross-overs. Whether in the NBA, European leagues or your neighborhood ...",
       "price": "1540002",
-      "stock":200,
+      "stock": 200,
       "images": [
         "https://kickz.akamaized.net/en/media/images/p/1200/adidas_performance-MARQUEE_MID_VEGAS-legend_ink_ftwr_white_flash_orange-2.jpg",
         "https://kickz.akamaized.net/en/media/images/p/1200/adidas_performance-MARQUEE_MID_VEGAS-legend_ink_ftwr_white_flash_orange-1.jpg",
@@ -145,7 +154,7 @@
       "colour": "WHITE/PARTICLE GREY-ROSE-BLACK",
       "description": "When it comes to basketball, there is no way around Nike – the brand with the Swoosh belongs to the game like dunks, three-pointers and cross-overs. Whether in the NBA, European leagues or your neighborhood ...",
       "price": 1987300,
-      "stock":50,
+      "stock": 50,
       "images": [
         "https://kickz.akamaized.net/en/media/images/p/1200/nike-W_AIR_MAX_90-WHITE_PARTICLE_GREY_ROSE_BLACK-1.jpg",
         "https://kickz.akamaized.net/en/media/images/p/1200/nike-W_AIR_MAX_90-WHITE_PARTICLE_GREY_ROSE_BLACK-2.jpg",

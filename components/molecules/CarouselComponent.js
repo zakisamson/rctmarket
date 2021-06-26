@@ -32,7 +32,10 @@ class Carousels extends Component {
       <Carousel style={{ height: "50vh", marginTop: "6.5vh" }}>
         {this.state.album.map((value, index) => {
           return (
-            <Carousel.Item style={{ height: "50vh", width: "1320px" }}>
+            <Carousel.Item
+              key={index}
+              style={{ height: "50vh", width: "1320px" }}
+            >
               <img src={value.src} alt={index} />
               <Carousel.Caption>
                 <h3>{value.header}</h3>

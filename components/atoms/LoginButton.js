@@ -24,12 +24,9 @@ export default function LoginButton() {
       alert("Username / Email & Password tidak boleh kosong");
     } else {
       axios
-        .get(
-          API +
-            `/users?username=${username}|email=${username}&password=${password}`
-        )
+        .get(API + `/users?username=${username}&password=${password}`)
         .then((res) => {
-          console.log(res.data);
+          // console.log(res.data);
           localStorage.setItem("userdata", JSON.stringify(res.data));
           handleClose();
         })

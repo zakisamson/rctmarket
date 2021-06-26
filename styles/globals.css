@@ -51,6 +51,7 @@ a {
   font-weight: 500;
   border-radius: 10px;
   margin-inline: 10px;
+  margin-block: 10px;
 }
 
 #login-regis-btn:hover {
